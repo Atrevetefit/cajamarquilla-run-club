@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CAJAMARQUILLA RUN CLUB · Inscripción gratis · 3K y 5K</title>
+<meta name="description" content="Viernes 4 de diciembre de 2026, 7:00 p. m. · Cajamarquilla – Huachipa. 3K y 5K. Ingreso gratuito. Inscríbete gratis.">
+<meta name="theme-color" content="#070614">
+<meta property="og:title" content="CAJAMARQUILLA RUN CLUB · Inscríbete gratis">
+<meta property="og:description" content="Social Run Experience · 3K y 5K · Vie 4 dic · 7:00 p. m. · Cajamarquilla – Huachipa">
+<meta property="og:image" content="flyer.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital,wght@0,700;1,700;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="glow g1" aria-hidden="true"></div>
+<div class="glow g2" aria-hidden="true"></div>
+
+<main class="app">
+
+  <!-- PORTADA -->
+  <section id="vPortada" class="view" aria-labelledby="tPortada">
+    <div class="hero-img">
+      <img src="flyer.jpg" alt="Flyer oficial de Cajamarquilla Run Club: Social Run Experience, 3K y 5K, viernes 4 de diciembre de 2026, 7:00 p. m." fetchpriority="high">
+      <div class="fade"></div>
+    </div>
+    <div class="hero-body">
+      <p class="eyebrow">Social Run Experience</p>
+      <h1 id="tPortada" class="display yellow">Inscríbete gratis</h1>
+      <div class="chips">
+        <span class="chip lime">3K y 5K</span>
+        <span class="chip cyan">Vie 4 dic · 7:00 p. m.</span>
+        <span class="chip pink">Cajamarquilla – Huachipa</span>
+      </div>
+      <p class="lead">DJ en vivo, Fitness Party, hidratación y sorteos. Ingreso gratuito.</p>
+      <button type="button" class="btn btn-primary" id="btnStart">Inscríbete gratis</button>
+      <a class="community" href="https://chat.whatsapp.com/I2wcCta6eae7sjj5fllJuA?s=cl&p=a&iam=2" target="_blank" rel="noopener">
+        <img src="comunidad.jpg" alt="" width="46" height="46">
+        <span>Quiero unirme a la comunidad</span>
+      </a>
+      <p class="ally">Activación fitness: <b>ATRÉVETE – Salón de Aeróbicos</b></p>
+    </div>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section id="vForm" class="view" hidden aria-label="Formulario de inscripción">
+    <form id="regForm" novalidate autocomplete="on">
+      <header class="topbar">
+        <span class="brand">Cajamarquilla Run Club</span>
+        <span class="stepno">Paso <b id="stepNo">1</b> de 4</span>
+      </header>
+      <div class="track" aria-hidden="true">
+        <span class="meta">META</span>
+        <div class="lane"><div class="fill" id="fill"></div></div>
+        <div class="runner" id="runner"></div>
+      </div>
+
+      <div class="steps">
+        <!-- Paso 1 -->
+        <fieldset class="step" data-step="0">
+          <legend class="display">Cuéntanos <span class="yellow">quién eres</span></legend>
+          <div class="field"><label for="nombre">Nombres y apellidos</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" maxlength="80" placeholder="Ej. María Pérez Quispe">
+            <small class="err" data-for="nombre"></small></div>
+          <div class="row">
+            <div class="field grow"><label for="dni">DNI</label>
+              <input id="dni" name="dni" type="text" inputmode="numeric" maxlength="8" placeholder="8 dígitos">
+              <small class="err" data-for="dni"></small></div>
+            <div class="field w104"><label for="edad">Edad</label>
+              <input id="edad" name="edad" type="text" inputmode="numeric" maxlength="2" placeholder="Años">
+              <small class="err" data-for="edad"></small></div>
+          </div>
+          <div class="field"><span class="lbl">Sexo</span>
+            <div class="pills three" role="radiogroup" aria-label="Sexo">
+              <label class="pill"><input type="radio" name="sexo" value="Masculino"><span>Masculino</span></label>
+              <label class="pill"><input type="radio" name="sexo" value="Femenino"><span>Femenino</span></label>
+              <label class="pill"><input type="radio" name="sexo" value="Prefiero no indicarlo"><span>Prefiero no indicarlo</span></label>
+            </div>
+            <small class="err" data-for="sexo"></small></div>
+        </fieldset>
+
+        <!-- Paso 2 -->
+        <fieldset class="step" data-step="1" hidden>
+          <legend class="display">¿Qué distancia vas a <span class="lime">correr?</span></legend>
+          <div class="dist" role="radiogroup" aria-label="Distancia">
+            <label class="dist-card"><input type="radio" name="distancia" value="3K"><span><b>3K</b><i>A tu ritmo</i></span></label>
+            <label class="dist-card"><input type="radio" name="distancia" value="5K"><span><b>5K</b><i>Con todo</i></span></label>
+          </div>
+          <small class="err" data-for="distancia"></small>
+          <div class="field"><label for="celular">Tu WhatsApp (9 dígitos)</label>
+            <input id="celular" name="celular" type="tel" inputmode="numeric" maxlength="9" placeholder="987654321">
+            <small class="err" data-for="celular"></small></div>
+        </fieldset>
+
+        <!-- Paso 3 -->
+        <fieldset class="step" data-step="2" hidden>
+          <legend class="display">Contacto de <span class="pink">emergencia</span></legend>
+          <div class="field"><label for="emNombre">Nombre</label>
+            <input id="emNombre" name="emNombre" type="text" maxlength="80" placeholder="Nombre del contacto">
+            <small class="err" data-for="emNombre"></small></div>
+          <div class="field"><label for="emCelular">Celular (9 dígitos)</label>
+            <input id="emCelular" name="emCelular" type="tel" inputmode="numeric" maxlength="9" placeholder="987654321">
+            <small class="err" data-for="emCelular"></small></div>
+          <div class="field"><span class="lbl">¿Cómo te enteraste del evento?</span>
+            <div class="pills wrap" role="radiogroup" aria-label="Cómo te enteraste">
+              <label class="pill"><input type="radio" name="medio" value="Facebook"><span>Facebook</span></label>
+              <label class="pill"><input type="radio" name="medio" value="Instagram"><span>Instagram</span></label>
+              <label class="pill"><input type="radio" name="medio" value="TikTok"><span>TikTok</span></label>
+              <label class="pill"><input type="radio" name="medio" value="WhatsApp"><span>WhatsApp</span></label>
+              <label class="pill"><input type="radio" name="medio" value="Amigos o familiares"><span>Amigos o familiares</span></label>
+              <label class="pill"><input type="radio" name="medio" value="Otro"><span>Otro</span></label>
+            </div>
+            <small class="err" data-for="medio"></small></div>
+          <div class="field"><label for="salud">¿Alguna alergia, condición médica o apoyo que necesites? <em class="opt">(opcional)</em></label>
+            <input id="salud" name="salud" type="text" maxlength="200" placeholder="Ej. alergia a la penicilina / movilidad reducida">
+            <label class="check" id="saludOk" hidden><input type="checkbox" name="aceptaSalud"><span>Autorizo que la organización use esta información solo para mi seguridad y apoyo durante el evento.</span></label>
+            <small class="err" data-for="aceptaSalud"></small></div>
+        </fieldset>
+
+        <!-- Paso 4 -->
+        <fieldset class="step" data-step="3" hidden>
+          <legend class="display">Último <span class="yellow">paso</span></legend>
+
+          <div id="minorBox" class="minor" hidden>
+            <p class="minor-t">Autorización de padre, madre o tutor</p>
+            <p class="small">Eres menor de 18 años: tu inscripción quedará pendiente hasta que la organización verifique esta autorización.</p>
+            <div class="field"><label for="tutorNombre">Nombre del padre, madre o tutor</label>
+              <input id="tutorNombre" name="tutorNombre" type="text" maxlength="80">
+              <small class="err" data-for="tutorNombre"></small></div>
+            <div class="row">
+              <div class="field grow"><label for="tutorDni">DNI del tutor</label>
+                <input id="tutorDni" name="tutorDni" type="text" inputmode="numeric" maxlength="8">
+                <small class="err" data-for="tutorDni"></small></div>
+              <div class="field grow"><label for="tutorCel">Celular del tutor</label>
+                <input id="tutorCel" name="tutorCel" type="tel" inputmode="numeric" maxlength="9">
+                <small class="err" data-for="tutorCel"></small></div>
+            </div>
+            <label class="check"><input type="checkbox" name="tutorOk"><span>Soy el padre, madre o tutor legal y autorizo la participación de este menor.</span></label>
+            <small class="err" data-for="tutorOk"></small>
+          </div>
+
+          <label class="check"><input type="checkbox" name="aceptaTerminos"><span>He leído y acepto los términos y condiciones y declaro que me encuentro en condiciones físicas adecuadas para participar. <em>(obligatorio)</em></span></label>
+          <small class="err" data-for="aceptaTerminos"></small>
+          <label class="check"><input type="checkbox" name="aceptaDatos"><span>Autorizo el tratamiento de mis datos personales para gestionar mi inscripción y las comunicaciones relacionadas con el evento. <em>(obligatorio)</em></span></label>
+          <small class="err" data-for="aceptaDatos"></small>
+          <label class="check"><input type="checkbox" name="aceptaFotos"><span>Autorizo el uso de fotografías y videos en los que aparezca para publicaciones informativas y promocionales de Cajamarquilla Run Club. <em>(opcional)</em></span></label>
+          <label class="check"><input type="checkbox" name="aceptaWsp"><span>Acepto recibir la confirmación de mi inscripción y comunicaciones operativas del evento mediante WhatsApp. <em>(opcional)</em></span></label>
+          <a href="#" id="openTerms" class="link">Leer términos y condiciones</a>
+        </fieldset>
+      </div>
+
+      <input type="text" name="web" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="form-msg" id="formMsg" role="alert" hidden></p>
+
+      <div class="nav">
+        <button type="button" class="btn-back" id="btnBack" aria-label="Volver al paso anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button type="submit" class="btn btn-primary grow" id="btnNext">Siguiente</button>
+      </div>
+      <p class="foot">Viernes 4 dic · 7:00 p. m. · Cajamarquilla – Huachipa · Gratis</p>
+    </form>
+  </section>
+
+  <!-- PASE (inscripción exitosa) -->
+  <section id="vPase" class="view" hidden aria-labelledby="tPase">
+    <h2 id="tPase" class="display lime center">¡Felicitaciones!</h2>
+    <p class="center sub">Tu inscripción ha sido registrada</p>
+
+    <div class="ticket">
+      <div class="ticket-img"><img src="flyer.jpg" alt="Cajamarquilla Run Club"><div class="fade"></div></div>
+      <div class="ticket-row">
+        <div><span class="k">Corredor</span><span class="v" id="pNombre">—</span></div>
+        <div class="r"><span class="k">Distancia</span><span class="v lime" id="pDist">—</span></div>
+      </div>
+      <div class="perf"><i class="l"></i><i class="r"></i></div>
+      <div class="ticket-bottom">
+        <div class="qr" id="qrBox" aria-label="Código QR de tu inscripción"></div>
+        <div>
+          <span class="k">Código de inscripción</span>
+          <span class="code" id="pCode">—</span>
+          <span class="small">Vie 4 dic · 7:00 p. m.<br>Cajamarquilla – Huachipa</span>
+        </div>
+      </div>
+    </div>
+    <p class="pending" id="pPending" hidden>Tu inscripción de menor de edad quedará <b>pendiente de verificación</b>. La organización se comunicará con tu padre, madre o tutor.</p>
+
+    <button type="button" class="btn btn-primary" id="btnQr">Ver mi código QR</button>
+    <a class="btn btn-outline" href="https://chat.whatsapp.com/I2wcCta6eae7sjj5fllJuA?s=cl&p=a&iam=2" target="_blank" rel="noopener">Quiero unirme a la comunidad</a>
+    <p class="center small">¿Dudas? Contacta a la organización:
+      <a href="https://wa.me/51965772515" target="_blank" rel="noopener" class="tel">965 772 515</a></p>
+    <p class="center small">Tip: toma una captura de pantalla de tu código.</p>
+  </section>
+
+  <!-- Códigos QR ampliado -->
+  <dialog id="qrDialog" class="dialog center">
+    <div class="dialog-body">
+      <h2 class="display yellow">Tu código</h2>
+      <div class="qr big" id="qrBig"></div>
+      <p class="code" id="qrCode">—</p>
+      <button type="button" class="btn btn-outline" id="closeQr">Cerrar</button>
+    </div>
+  </dialog>
+
+  <!-- Términos -->
+  <dialog id="termsDialog" class="dialog">
+    <div class="dialog-body">
+      <h2>Términos y condiciones</h2>
+      <p class="small">Borrador sujeto a revisión legal conforme a la legislación peruana antes de su uso definitivo.</p>
+      <h3>1. Participación voluntaria</h3><p>La participación es voluntaria y gratuita. El participante puede retirarse en cualquier momento.</p>
+      <h3>2. Aptitud física</h3><p>El participante declara encontrarse en condiciones físicas y de salud adecuadas para realizar una actividad de running de 3K o 5K, y no tener indicación médica en contrario.</p>
+      <h3>3. Riesgos inherentes</h3><p>El running implica riesgos propios de la actividad física (caídas, lesiones, agotamiento, deshidratación, condiciones del terreno y del clima), que el participante reconoce.</p>
+      <h3>4. Responsabilidad del participante</h3><p>El participante es responsable de su preparación, de su salud y de su conducta durante el evento, y de los daños que cause por su propia conducta.</p>
+      <h3>5. Seguridad</h3><p>El participante se compromete a respetar las indicaciones del personal de la organización, la ruta señalizada y las normas de seguridad.</p>
+      <h3>6. Responsabilidad de la organización</h3><p>La organización adoptará medidas razonables de seguridad y organización. Su responsabilidad se limita a lo que establece la ley; estos términos no excluyen la responsabilidad por dolo o culpa inexcusable ni los derechos irrenunciables del participante.</p>
+      <h3>7. Menores de edad</h3><p>Los menores de 18 años solo podrán participar con autorización expresa de su padre, madre o tutor legal, sujeta a verificación.</p>
+      <h3>8. Aviso de privacidad</h3><p><b>Finalidad:</b> gestionar la inscripción, emitir el código QR y enviar comunicaciones del evento. <b>Responsable del tratamiento:</b> Cajamarquilla Run Club, con la activación fitness de ATRÉVETE – Salón de Aeróbicos (contacto: club.fitness.atrevete@gmail.com). <b>Derechos:</b> acceso, rectificación, cancelación y oposición, escribiendo a club.fitness.atrevete@gmail.com o al 965 772 515. Los datos no se publican ni se comparten con terceros ajenos a la organización.</p>
+      <button type="button" class="btn btn-outline" id="closeTerms">Cerrar</button>
+    </div>
+  </dialog>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
